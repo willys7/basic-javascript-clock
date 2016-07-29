@@ -1,36 +1,40 @@
-$traffic-light-width: 200px;
-$light-size: $traffic-light-width*0.75;
-.traffic-light{
-  background: black;
-  margin-bottom: 10px;
-  padding: $traffic-light-width*0.1;
-  width: $traffic-light-width;
-
-  .light{
-    background: white;
-    border-radius: 100%;
-    height: $light-size;
-    margin: 0 auto 10px auto;
-    width: $light-size;
-
-    &.green{
-      background: #0f0;
-    }
-
-    &.red{
-      background: red;
-    }
-
-    &.yellow{
-      background: yellow;
-    }
-
-    &.off{
-      opacity: 0.3;
-    }
-
-    &:last-child{
-      margin-bottom: 0;
-    }
-  }
+$digital-clock-width: 650px;
+$clock-height:350px;
+$digital-number-size: $digital-clock-width*0.2;
+$number-font-size:300px;
+$font-size:40px;
+$font-color:black;
+$number-separation:7px;
+$dots-size:44px;
+$analog-position:100px;
+$analog-separation:5px;
+#reloj{
+  
+  height: $clock-height;
+  width: $digital-clock-width;
+  background: with;
+  clear: both;
+  position: relative;
+}
+.display{
+  height: 100%;
+}
+.numero{
+  color: $font-color;
+  float: left;
+  font-size: $font-size;
+  height: 100%;
+  line-height: $number-font-size;
+  margin: 0 $number-separation 0 $number-separation;
+  text-align: center;
+  width: $digital-number-size;
+}
+.segundos{
+  line-height: $number-font-size - 10;
+  font-size: $font-size;
+  color: $font-color;
+  float: left;
+  width: $dots-size;
+  text-align: center;
+  height: 100%;
 }
